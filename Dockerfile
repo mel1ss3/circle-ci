@@ -27,7 +27,7 @@ ENV GIT_COMMIT="${GIT_COMMIT}"
 
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 
-RUN install-php-extensions exif gd imagick
+#RUN install-php-extensions exif gd imagick
 
 COPY . /app
 COPY --from=builder /app/public/build /app/public/build
